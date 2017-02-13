@@ -1,4 +1,4 @@
-/* The Shortest Path*/
+/* The Shortest Path Spoj Solution*/
 #include<bits/stdc++.h>
 using namespace std;
 struct val{
