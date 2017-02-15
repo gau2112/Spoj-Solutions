@@ -34,22 +34,6 @@ bool operator<(const val& p,const val& q)
 {
 	return p.w > q.w;
 }
-/*
-void update(int par[],int dis[])
-{
-
-	int i = des,j;
-	while(par[i] != -2)
-	{
-		j = par[i];
-		//cout<<i<<" "<<j<<endl;
-		graph[j][i] = INT_MAX;
-		//cout<<i<<" "<<j<<endl;
-		dis[i] = INT_MAX;
-		i = j;
-	}
-}
-*/
 void dijakstra(vector<val>graph[],int dis[],int src)
 {
 	priority_queue<val,vector<val>,compare >ans;
@@ -86,57 +70,9 @@ void dijakstra(vector<val>graph[],int dis[],int src)
                 ans.push(pot);
 			}
 		}
-        /*for(int i=0;i<v;i++)
-		{
-			if(graph[p][i]!=INT_MAX)
-			if(dis[p] + graph[p][i] < dis[i])
-			{
-					dis[i] =  dis[p] + graph[p][i];
-					par[i] = p;
-					val pot;
-					pot.d = i;
-					pot.w = dis[i];
-					ans.push(pot);
-				}
-		}*/
 	}
 }
 
-
-/*
-bool dfs(int is,int res)
-{
-	if(is==des && res==0)
-	{
-		//graph[is][d] = INT_MAX;
-		return true;
-	}
-	if(res < 0)
-		return false;
-	if(is==des)
-	{
-		return false;
-	}
-	int i=0;
-	int flag = 0;
-	for(i=0;i<v;i++)
-	{
-		if(graph[is][i]!=INT_MAX)
-		{
-			if(dfs(i,res-graph[is][i])==true)
-			{
-				graph[is][i] = INT_MAX;
-				flag = 1;//return true;
-			}
-
-		}
-	}
-	if(flag)
-		return true;
-	return false;
-
-}
-*/
 int main()
 {
 	int t;
@@ -208,5 +144,5 @@ int main()
 		//cin>>src>>des;
 		//dijakstra();
 	}
-
+return 0;
 }
