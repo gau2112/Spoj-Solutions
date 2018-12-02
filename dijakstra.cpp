@@ -6,6 +6,10 @@ int w;
 };
 vector<val>graph[100005];
 int src,des,v;
+
+// Compare class for the dijakstra's algorithm
+// There are two ways
+// Method 1
 class compare{
 
 public:
@@ -15,14 +19,18 @@ bool operator()(const val& p,const val& q)
 }
 };
 
+// Method 2
+/*
 bool operator<(const val& p,const val& q)
 {
 	return p.w > q.w;
 }
-
+*/
 void dijakstra()
 {
+    // Notation 1
     priority_queue<val,vector<val>,compare >ans;
+    // Notation 2
     //priority_queue<val>ans;
     int dis[100005];
     int vis[100005];
